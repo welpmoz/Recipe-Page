@@ -34,6 +34,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - Class based CSS styles
 - Sass
 - Google Fonts
+- Git
 
 
 ### Useful resources
