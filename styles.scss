@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+:root {
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+    --stone-900: hsl(24, 5%, 18%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-100: hsl(30, 54%, 90%);
+    --brown-800: hsl(14, 45%, 36%);
+    --white: white;
+
+    --font-family-1: "Young Serif", serif;
+    --font-family-2: "Outfit", sans-serif;
+
+    font-size: 62.5%;
+}
+
+@mixin define-font(
+    $font-family,
+    $font-weigth,
+    $font-size,
+    $line-height,
+    $letter-spacing: 0px,
+) {
+    font-family: $font-family;
+    font-weight: $font-weigth;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+.color-stone-900 {
+    color: var(--stone-900);
+}
+
+.color-stone-600 {
+    color: var(--stone-600);
+}
+
+.color-rose-800 {
+    color: var(--rose-800);
+}
+
+.color-brown-800 {
+    color: var(--brown-800);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    background-color: var(--stone-100);
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+}
+
+ul, ol {
+    @include define-font(
+        var(--font-family-2), 
+        400, 
+        1.6rem, 
+        150%, 
+        0px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    list-style-position: inside;
+}
+
+ol {
+    list-style: none;
+    counter-reset: step;
+}
+
+li {
+    padding-left: 0.8rem;
+    display: flex;
+    gap: 1.6rem;
+}
+
+ol li {
+    counter-increment: step;
+    align-items: flex-start;
+}
+
+ol li::before {
+    content: counter(step) ".";
+    margin-right: 0.6rem;
+    @include define-font(
+        var(--font-family-2), 
+        bold, 
+        1.6rem, 
+        150%, 
+        0px);
+    color: var(--brown-800);
+}
+
+ul li::before {
+    content: "●";
+    margin-right: 0.6rem;
+    color: var(--rose-800);
+    align-self: center;
+}
+
+.card {
+    grid-column: 1 / 5;
+    background-color: var(--white);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-image {
+    width: 100%;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 4rem 3.2rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.title > h1 {
+    @include define-font(
+        var(--font-family-1), 
+        400, 
+        3.6rem, 
+        100%, 
+        0px);
+}
+
+.title > p {
+    @include define-font(
+        var(--font-family-2), 
+        400, 
+        1.6rem, 
+        150%, 
+        0px);
+}
+
+.preparation {
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: var(--rose-50);
+    border-radius: 12px;
+}
+
+.preparation > h3 {
+    @include define-font(
+        var(--font-family-2), 
+        600, 
+        2rem, 
+        100%, 
+        0px);
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.ingredients > h2 {
+    @include define-font(
+        var(--font-family-1), 
+        400, 
+        2.8rem, 
+        100%, 
+        0px);
+}
+
+.ingredients > ul > li::before {
+    color: var(--brown-800);
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.instructions > h2 {
+    @include define-font(var(--font-family-1),
+        400,
+        2.8rem,
+        100%,
+        0px);
+}
+
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.nutrition > h2 {
+    @include define-font(var(--font-family-1),
+        400,
+        2.8rem,
+        100%,
+        0px);
+}
+
+.nutrition > p {
+    @include define-font(
+        var(--font-family-2), 
+        400, 
+        1.6rem, 
+        150%, 
+        0px);
+}
+
+.table-nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    @include define-font(
+        var(--font-family-2), 
+        400, 
+        1.6rem, 
+        150%, 
+        0px);
+}
+
+hr {
+    color: var(--stone-150);
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3.2rem;
+    gap: 1.6rem;
+}
+
+@media (min-width: 40rem) {
+    body {
+        grid-template-columns: repeat(8, 5.6rem);
+        gap: 2.4rem;
+        justify-content: center;
+        align-content: center;
+        padding: 12.8rem 0;
+    }
+
+    .card {
+        grid-column: 1 / 9;
+        padding: 4rem;
+        gap: 4rem;
+    }
+
+    .top-image {
+        border-radius: 12px;
+    }
+
+    .text-content {
+        padding: 0;
+    }
+
+    .title > h1 {
+        @include define-font(
+            var(--font-family-1), 
+            400, 
+            4rem, 
+            100%, 
+            0px);
+    }
+}
+
+@media (min-width: 60rem) {
+    body {
+        grid-template-columns: repeat(12, 6.4rem);
+        gap: 3.2rem;
+    }
+
+    .card {
+        grid-column: 3 / 11;
+    }
+}
