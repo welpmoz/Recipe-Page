@@ -1,6 +1,6 @@
 # Frontend Mentor - Recipe Page
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -17,12 +17,12 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![](./solucion.png)
+![](./solution.png)
 
 ### Links
 
-- Solution URL: [GitHub repository](https://github.com/welpmoz/Social-Links-Profile).
-- Live Site URL: [Live site](https://welpmoz.github.io/Social-Links-Profile/)
+- Solution URL: [GitHub repository](https://github.com/welpmoz/Recipe-Page).
+- Live Site URL: [Live site](https://welpmoz.github.io/Recipe-Page/)
 
 ## My process
 
@@ -34,7 +34,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - Class based CSS styles
 - Sass
 - Google Fonts
-- Git
+- Git & GitHub
 
 
 ### Useful resources
